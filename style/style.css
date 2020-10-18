@@ -1,1 +1,110 @@
-#google-logo
+body {
+    font-family: Arial, sans-serif;
+    color: #202124;
+}
+
+.top {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 45px;
+    grid-template-columns: 1fr 8.5fr 2fr;
+    grid-template-areas: "top_l . top_r";
+    line-height: 28px;
+}
+
+.top-left {
+    grid-area: top_l;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top-right {
+    grid-area: top_r;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sign-in {
+    color: white;
+    background-color: #4285f4;
+    border-color: #4285f4;
+    border-style: solid;
+    outline: none;
+    height: 30px;
+    width: 69px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+#sign-in:hover {
+    cursor: pointer;
+}
+
+.a_ul {
+    color:rgba(0,0,0,0.87);
+    font-size: 13px;
+}
+
+.a_ul:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+a {
+    text-decoration: none;
+}
+
+#apps {
+    color: grey;
+    font-size: 30;
+    line-height: 40px;
+}
+
+#apps:hover {
+    color: black;
+    opacity: 0.85;
+}
+
+
+.main-group {
+}
+
+#google-logo {
+    display: block;
+}
+
+.footer {
+    display: grid;
+    grid-template-rows: 40px;
+    grid-template-columns: 3fr 5fr 2fr;
+    grid-template-areas: " bot_l . bot_r ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #70757a;
+    font-size: 15px;
+    line-height: 40px;
+    border-top: 1px solid #dadce0;
+    background-color: rgb(242, 242, 242);
+}
+
+.bottom-left {
+    grid-area: bot_l;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom-right {
+    grid-area: bot_r;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
