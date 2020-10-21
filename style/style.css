@@ -10,7 +10,7 @@ body {
     position: relative;
 }
 
-.top {
+.navbar {
     flex-shrink: 0;
     display: grid;
     width: 100%;
@@ -75,6 +75,45 @@ body {
 .main-group {
     flex: 1 0 auto;
     flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 3fr 1fr 1fr 2fr;
+    grid-template-areas: " . google-logo ."
+                            ". search-container ."
+                            ". buttons ."
+                            ". . .";
+}
+
+.google-logo {
+    grid-area: google-logo;
+    align-self: end;
+    justify-self: center;
+}
+
+.logo-image {
+    padding-bottom: 30px;
+}
+
+.search-container {
+    grid-area: search-container;
+    display: flex;
+    border-radius: 10px;
+}
+
+.lens {
+    width: 20px;
+    height: 20px;
+}
+
+.search-bar {
+    height: 30px;
+    width: 100%;
+}
+
+.buttons {
+    grid-area: buttons;
+    align-self: center;
+    justify-self:center;
 }
 
 .footer {
