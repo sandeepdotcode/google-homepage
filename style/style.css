@@ -75,66 +75,66 @@ body {
 .main-group {
     flex: 1 0 auto;
     flex-shrink: 0;
-    display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
-    grid-template-rows: 3fr 1fr 1fr 2fr;
-    grid-template-areas: " . google-logo ."
-                            ". search-container ."
-                            ". buttons ."
-                            ". . .";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55vh;
+    min-height: 300px;
 }
 
 .google-logo {
-    grid-area: google-logo;
+/*    grid-area: google-logo;
     align-self: end;
     justify-self: center;
-}
-
-.logo-image {
+    */
+    display: block;
+    width: 272;
+    height: 92;
+    padding-top: 109px;
     padding-bottom: 30px;
 }
 
-.search-container {
-    grid-area: search-container;
+.search-bar {
     display: flex;
     align-items: center;
-}
-
-.search-cont-in {
-    display: flex;
-    border-radius: 24px;
-    align-items: center;
-    height: 46px;
-    width: 100%;
+    justify-content: space-between;
+    width: 582px;
+    height: 44px;
+    padding: 10px;
     border: 1px solid #dfe1e5;
+    border-radius: 24px;
 }
 
-.search-cont-in:hover {
+.search-bar:hover,
+.search-bar:focus-within {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
 }
 
-.lens {
-    width: 15px;
-    height: 15px;
+#lens-icon {
+    font-size: 20px;
+    color: grey;
     position: relative;
-    left: 15px;
+    left: 5px;
 }
 
-.search-bar {
-    height: 34px !important;
-    width: 90%;
+.search-input {
+    height: 100%;
+    width: 100%;
     border: none;
     position: relative;
-    left: 30px;
+    left: 10px;
     background-color: transparent;
     font-size: 15px;
     font-family: arial,sans-serif;
+    outline: none;
 }
 
 .buttons {
-    grid-area: buttons;
-    align-self: center;
-    justify-self:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
 }
 
 #search-button, #lucky-button {
@@ -195,4 +195,17 @@ body {
 
 .a-bot:hover {
     text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 660px) {
+    .search-bar {
+        width: 80%;
+    }
+
+    .footer {
+        grid-template-rows: 40px 40px;
+        grid-template-areas: "bot_l"
+                             "bot_r";
+    }
 }
